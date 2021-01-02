@@ -49,3 +49,6 @@ packages/
 npm-debug.log
 yarn-error.log
 
+# Development Settings
+/dev/
+docker-compose.yml
