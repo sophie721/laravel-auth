@@ -28,8 +28,8 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
 
-        $schedule->command('activations:clean')
-                    ->daily();
+        $schedule->command('activations:clean')->daily();
+        $schedule->command('command:fetchAstroData')->hourly();
     }
 
     /**
