@@ -45,10 +45,12 @@ yarn.lock
 /storage/users
 packages/
 
-# Debug Files
+### Debug Files ###
 npm-debug.log
 yarn-error.log
 
-# Development Settings
+### Development Settings ###
 /dev/
 docker-compose.yml
+.phpstorm.meta.php
+_ide_helper.php
