@@ -14,10 +14,13 @@
 */
 
 // Homepage Route
-Route::group(['middleware' => ['web', 'checkblocked']], function () {
+Route::group(['middleware' => ['web']], function () {
     Route::get('/', function () {
         return redirect('/home');
     })->name('welcome');
+    Route::get('/initial', function () {
+        return Artisan::call('migrate');
+    });
 });
 
 // Authentication Routes
