@@ -29,6 +29,10 @@ Auth::routes();
 // Public Routes
 Route::group(['middleware' => ['web', 'activity', 'checkblocked']], function () {
     Route::get('/astro-crawler', 'AstroCrawlerController@show');
+    Route::get('/schedule', function () {
+        Artisan::call('schedule:run');
+        return '';
+    });
     // Activation Routes
     Route::get('/activate', ['as' => 'activate', 'uses' => 'Auth\ActivateController@initial']);
 
